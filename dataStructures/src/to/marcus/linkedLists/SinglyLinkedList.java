@@ -14,7 +14,7 @@ public class SinglyLinkedList{
     }
 
     //used to insert at the beginning of the list
-    //newNode becomes first
+    //newNode becomes first by replacing its data and assigning the current 'first' to its 'next' value
     public void insertFirst(int nodeData){
         Node newNode = new Node();
         newNode.data = nodeData;
@@ -37,6 +37,19 @@ public class SinglyLinkedList{
             current.displayNode();
             current = current.next;
         }
+    }
+
+    public void insertLast(int data){
+        Node current = first;
+        while(current.next != null){
+            current = current.next; //loop until current.next is null
+        }
+        Node newNode = new Node();
+        newNode.data=data;
+        //since we've broken out of the loop, it means next is null (the end of the list)
+        //so we can assign the newNode to the last item
+        current.next = newNode;
+
     }
 
 

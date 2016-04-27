@@ -7,6 +7,7 @@ package to.marcus.linkedLists;
 public class App {
 
     public static void main(String[] args){
+        /*
         Node nodeA = new Node();
         nodeA.data = 4;
 
@@ -24,10 +25,18 @@ public class App {
         nodeB.next = nodeC;
         nodeC.next = nodeD;
 
-        System.out.print(listLength(nodeD)); //1
+        System.out.print(listLength(nodeD) + ","); //1
         System.out.print(listLength(nodeA)); //4
+        */
 
+        SinglyLinkedList myList = new SinglyLinkedList();
+        myList.insertFirst(100);
+        myList.insertFirst(50);
+        myList.insertFirst(25);
+        myList.insertFirst(5);
+        myList.insertLast(10100101);
 
+        myList.displayList();
     }
 
     //think of a linked list as a train with multiple carts (node#.next refers to the next node)
