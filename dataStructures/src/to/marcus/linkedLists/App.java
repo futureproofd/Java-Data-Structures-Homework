@@ -1,5 +1,7 @@
 package to.marcus.linkedLists;
 
+import to.marcus.linkedLists.circular.CircularLinkedList;
+
 /**
  * Created by marcus on 20/04/16.
  * Run our linked list nodes
@@ -29,6 +31,8 @@ public class App {
         System.out.print(listLength(nodeA)); //4
         */
 
+        System.out.println("=============Singly Linked output==============");
+
         SinglyLinkedList myList = new SinglyLinkedList();
         myList.insertFirst(100);
         myList.insertFirst(50);
@@ -37,9 +41,18 @@ public class App {
         myList.insertLast(10100101);
 
         myList.displayList();
+
+        System.out.println("=============Circular Linked output==============");
+
+        CircularLinkedList myCircularList = new CircularLinkedList();
+        myCircularList.insertFirst(100);
+        myCircularList.insertFirst(200);
+        myCircularList.insertFirst(300);
+        myCircularList.insertLast(1000000000);
+        myCircularList.displayList();
     }
 
-    //think of a linked list as a train with multiple carts (node#.next refers to the next node)
+    //conceptually, think of a linked list as a train with multiple carts (node#.next refers to the next node)
     public static int listLength(Node node){
         int i = 0;
         Node currentNode = node;

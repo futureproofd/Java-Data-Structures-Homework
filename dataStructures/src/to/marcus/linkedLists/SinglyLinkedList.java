@@ -1,6 +1,10 @@
 package to.marcus.linkedLists;
 
-//singly directional linked list
+/**
+ *   singly directional linked list
+  *  All of the nodes only know of the 'next' one
+ */
+
 public class SinglyLinkedList{
     private Node first;
 
