@@ -19,7 +19,7 @@ public class App {
         Node nodeD = new Node();
         nodeD.data = 8;
 
-        // link nodes together, (a pointer to another object in memory!)
+        // link nodes together, (a pointer to another object in memory)
         nodeA.next = nodeB;
         nodeB.next = nodeC;
         nodeC.next = nodeD;

@@ -1,4 +1,4 @@
-package to.marcus;
+package to.marcus.queue;
 
 /**
  * Created by marcus on 20/04/16

@@ -1,5 +1,8 @@
 package to.marcus;
 
+import to.marcus.queue.Queue;
+import to.marcus.stack.Stack;
+
 public class Main {
 
     //entry point

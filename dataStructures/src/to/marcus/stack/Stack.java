@@ -1,4 +1,4 @@
-package to.marcus;
+package to.marcus.stack;
 
 /**
  * Created by marcus on 18/04/16
