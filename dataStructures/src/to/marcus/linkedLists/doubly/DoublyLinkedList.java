@@ -65,4 +65,34 @@ public class DoublyLinkedList {
         last = last.previous; //assign last reference variable to the node before the one we are deleting
         return temp;
     }
+
+    //assume non-empty list
+    /**
+     *     insert a new node after a given node
+     *     identify the node with the given data key that you want to insert after
+     */
+    public boolean insertAfter(int key, int data){
+        Node current = first; // start from beginning of the list
+        while(current.data != key){ //loop until we land on the key
+            current = current.next;
+            if(current == null){
+                //key doesn't exist
+                return false;
+            }
+        }
+        Node newNode = new Node();
+        newNode.data = data;
+
+        if(current == last){
+            current.next = null;
+            last = newNode;
+        }else{
+            newNode.next = current.next;    // new nodes next field should point to the node ahead of the current
+            current.next.previous = newNode; //reference back to the newly inserted node
+        }
+        newNode.previous = current;
+        current.next = newNode;
+
+        return true;
+    }
 }
