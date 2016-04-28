@@ -88,7 +88,7 @@ public class DoublyLinkedList {
             last = newNode;
         }else{
             newNode.next = current.next;    // new nodes next field should point to the node ahead of the current
-            current.next.previous = newNode; //reference back to the newly inserted node
+            current.next.previous = newNode; //reference back to the newly inserted node.
         }
         newNode.previous = current;
         current.next = newNode;
