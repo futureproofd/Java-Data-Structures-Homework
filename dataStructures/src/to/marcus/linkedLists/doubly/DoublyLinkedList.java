@@ -95,4 +95,48 @@ public class DoublyLinkedList {
 
         return true;
     }
+
+    //assume non-empty list
+    public Node deleteKey(int key){
+        Node current = first;
+        while(current.data != key){
+            current = current.next;
+            if(current == null){
+                return null;
+            }
+        }
+        //loop exceeded, match found:
+        if(current == first){
+            first=current.next; // make the first field point to the node following current (since it will be deleted)
+        }else{
+            current.previous.next = current.next;
+        }
+        if(current == last){
+            last = current.previous; //if the last node is to be deleted, refer to the 2nd last:
+        }else{
+            current.next.previous = current.previous; //make the next node's previous field the field before current
+        }
+        return current;
+    }
+
+    public void displayForward(){
+        System.out.print("List from first to last:");
+        Node current = first; //start from beginning
+        while(current != null){
+            current.displayNode();
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public void displayBackward(){
+        System.out.print("List from last to first:");
+        Node current = last; //start from beginning
+        while(current != null){
+            current.displayNode();
+            current = current.previous;
+        }
+        System.out.println();
+    }
+
 }

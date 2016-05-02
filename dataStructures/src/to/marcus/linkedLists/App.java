@@ -1,6 +1,7 @@
 package to.marcus.linkedLists;
 
 import to.marcus.linkedLists.circular.CircularLinkedList;
+import to.marcus.linkedLists.doubly.DoublyLinkedList;
 
 /**
  * Created by marcus on 20/04/16.
@@ -50,6 +51,15 @@ public class App {
         myCircularList.insertFirst(300);
         myCircularList.insertLast(1000000000);
         myCircularList.displayList();
+
+        System.out.println("=============Doubly Linked output==============");
+
+        DoublyLinkedList myDoublyList = new DoublyLinkedList();
+        myDoublyList.insertFirst(100);
+        myDoublyList.insertFirst(300);
+        myDoublyList.insertFirst(500);
+        myDoublyList.displayBackward();
+        myDoublyList.displayForward();
     }
 
     //conceptually, think of a linked list as a train with multiple carts (node#.next refers to the next node)
