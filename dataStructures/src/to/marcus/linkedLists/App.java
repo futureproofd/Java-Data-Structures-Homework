@@ -58,8 +58,15 @@ public class App {
         myDoublyList.insertFirst(100);
         myDoublyList.insertFirst(300);
         myDoublyList.insertFirst(500);
+        myDoublyList.insertLast(90000);
         myDoublyList.displayBackward();
         myDoublyList.displayForward();
+        myDoublyList.deleteFirst();
+        myDoublyList.displayForward();
+        myDoublyList.deleteKey(300);
+        myDoublyList.displayForward();
+        myDoublyList.insertAfter(100,1333);
+        myDoublyList.displayBackward();
     }
 
     //conceptually, think of a linked list as a train with multiple carts (node#.next refers to the next node)
