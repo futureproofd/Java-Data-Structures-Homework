@@ -13,7 +13,7 @@ An important concept for first/last instance variables is that they are referenc
 
 ##### Big O notation:
 
-![Example](https://github.com/futureproofd/JavaHomework/assets/screencaps/big_o_notation.png)
+![Example](https://github.com/futureproofd/JavaHomework/blob/master/assets/screencaps/big_o_notation.png)
 
 A constant is a straight, horizontal line (same number of steps) per input: O(1)
 
@@ -23,7 +23,7 @@ A quadratic algorithm increases steeply, requiring a higher number of steps per 
 
 ##### Logarithmic scaling:
 
-![Example](https://github.com/futureproofd/JavaHomework/assets/screencaps/logarithmic.png)
+![Example](https://github.com/futureproofd/JavaHomework/blob/master/assets/screencaps/logarithmic.png)
 
 A Logarithmic algorithm, O(log n) is faster than the previous algorithms, since we are dividing the input size (the inverse of exponentiation)
 
