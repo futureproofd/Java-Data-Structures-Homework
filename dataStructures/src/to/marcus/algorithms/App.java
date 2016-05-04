@@ -38,7 +38,7 @@ public class App {
     }
 
     /**
-     *   simple binary search: returns position of search
+     *   simple binary search: divide and conquer
      * @param a the array
      * @param x the search
      * @return the position

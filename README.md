@@ -32,3 +32,14 @@ A Logarithmic algorithm, O(log n) is faster than the previous algorithms, since 
 ![Example](https://github.com/futureproofd/JavaHomework/blob/master/assets/screencaps/insertion_sort.png)
 
 Establishes a sorted (j) and unsorted area (element)
+
+##### Merge Sorting:
+
+[Visual example](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+
+Similar to the 'divide and conquer' approach in Binary search. 
+
+1. Splitting - split initial array into half, then keep dividing the arrays into half using mergeSort recursively, for  both left and right arrays. 
+				This will arrive to a point where there is only a single element in each array (base case: if(p < r))
+2. Merge the data back into two arrays
+3. both arrays are merged
