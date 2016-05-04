@@ -14,7 +14,7 @@ package to.marcus.algorithms;
  */
 public class App {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         //System.out.println(binarySearch(new int[]{1,2,4,8,16,32,64,128,256}, 256));
 
         //reduceByOne(10);
@@ -22,7 +22,19 @@ public class App {
         //System.out.println(recursiveLinearSearch(new int[]{1,2,4,8,16,32,64,128,256}, 0, 256));
 
         //remember* binary search only works on a sorted array
-        System.out.println(recursiveBinarySearch(new int[]{1,2,4,8,16,32,64,128,256,512,1024,2048}, 0, 11, 64));
+       //System.out.println(recursiveBinarySearch(new int[]{1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048}, 0, 11, 64));
+
+        //test sorting
+       // int[] myTestArray = selectionSort(new int[]{2, 8, 1, 32, 256, 64, 512, 16, 4, 128});
+        //for (int i = 0; i < myTestArray.length; i++) {
+         //   System.out.println(myTestArray[i]);
+        //}
+
+        //test insertion sort
+        int[] myTestArray2 = insertionSort(new int[]{2, 8, 1, 32, 256, 64, 512, 16, 4, 128});
+        for (int i = 0; i < myTestArray2.length; i++) {
+            System.out.println(myTestArray2[i]);
+        }
     }
 
     /**
@@ -103,4 +115,42 @@ public class App {
         }
     }
 
+    /**
+     * Sort an array
+     * @param a the array to sort
+     * @return the sorted array in ascending order
+     */
+    public static int[] selectionSort(int a[]){
+        for(int i=0; i < a.length; i++){
+            int minimum = i;
+            for(int j = i+1; j < a.length; j++){    //need to compare values 1 ahead of initial for loop
+                if(a[j] < a[minimum]){              // if we find a smaller value
+                    minimum = j;
+                }
+            }
+            int temp = a[i];
+            a[i] = a[minimum];
+            a[minimum] = temp;
+        }
+        return a;
+    }
+
+    /**
+     * Insertion sorting: use debug to see step-by-step
+     * @param a the array to sort
+     * @return the sorted array in ascending order
+     */
+    public static int[] insertionSort(int[] a){
+    //0th slot is considered already sorted (in the sorted section)
+        for(int i = 1; i < a.length; i++){
+            int element = a[i];                     //element variable contains the data we intend on bringing over to the sorted area
+            int j = i -1;                           //index pos of the last value in sorted area
+            while(j >= 0 && a[j] > element){        //if j (element before) is greater, swap
+                a[j+1] = a[j];
+                j--;                                //j decrements and exits while loop
+            }
+            a[j+1] = element;                       //decremented j then swaps elements value
+        }
+        return a;
+    }
 }

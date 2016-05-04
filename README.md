@@ -27,3 +27,8 @@ A quadratic algorithm increases steeply, requiring a higher number of steps per 
 
 A Logarithmic algorithm, O(log n) is faster than the previous algorithms, since we are dividing the input size (the inverse of exponentiation)
 
+##### Insertion Sorting:
+
+![Example](https://github.com/futureproofd/JavaHomework/blob/master/assets/screencaps/insertion_sort.png)
+
+Establishes a sorted (j) and unsorted area (element)
